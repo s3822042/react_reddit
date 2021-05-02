@@ -9,6 +9,21 @@ import { HelloResolver } from "./resolvers/hello";
 import { PostResolver } from "./resolvers/post";
 import { UserResolver } from "./resolvers/user";
 
+import redis from 'redis';
+import session from 'express-session';
+
+let RedisStore = require('connect-redis')(session)
+let redisClient = redis.createClient()
+
+app.use(
+  session({
+    store: new RedisStore({ client: redisClient }),
+    saveUninitialized: false,
+    secret: 'keyboard cat',
+    resave: false,
+  })
+)
+
 const main = async () => {
   const orm = await MikroORM.init(microConfig);
   await orm.getMigrator().up();
