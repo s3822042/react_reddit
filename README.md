@@ -7,14 +7,17 @@ This project is to create Reddit using React as front-end framework
 1. Reactjs
 2. TypeScript
 3. GraphQL
-4. URQL/Apollo 
+4. URQL/Apollo
 5. Nodejs
-6. PostgreSQL
-7. MikroORM/TypeORM
-8. Redis
-9. Next.js
-10. TypeGraphQL
-11. Electronjs
-12. Docker
+6. Express
+7. PostgreSQL
+8. MikroORM/TypeORM
+9. Redis
+10. Next.js
+11. Chakra UI
+12. TypeGraphQL
+13. Electronjs
+14. Docker
+15. Other dependencies: argon2, connect-redis, express-session
 
 ### Credit
