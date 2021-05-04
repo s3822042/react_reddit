@@ -13,10 +13,10 @@ import session from "express-session";
 import connectRedis from "connect-redis";
 import cors from "cors";
 
+
 const main = async () => {
   const orm = await MikroORM.init(microConfig);
   await orm.getMigrator().up();
-
   const app = express();
 
   const RedisStore = connectRedis(session);
